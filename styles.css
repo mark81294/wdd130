@@ -26,10 +26,12 @@ h1 {
   color: #333;
 }
 
-/* CSS for images */
-img {
+/* CSS for the profile image */
+.profile-img {
   display: block;
   margin: 0 auto;
+  width: 150px; /* Set a specific width for the profile image */
+  height: auto; /* Maintain aspect ratio */
 }
 
 /* CSS for the main section */
