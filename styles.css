@@ -1,12 +1,51 @@
-/* Limit width for the main element */
-main {
-  max-width: 840px;
+/* CSS for the whole document */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
 }
 
-/* Style for the aside element */
+/* CSS for the navigation bar */
+nav {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+/* CSS for the heading */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* CSS for the profile image */
+.profile-img {
+  display: block;
+  margin: 0 auto;
+  width: 150px; /* Set a specific width for the profile image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* CSS for the main section */
+main {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: white;
+}
+
+/* CSS for the aside section */
 aside {
   width: 20rem;
-  margin: 1rem;
+  margin: 1rem auto;
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 1rem;
   background-color: #eee;
@@ -14,29 +53,24 @@ aside {
   text-align: center;
 }
 
-/* Style for the image inside the aside element */
 aside img {
   width: 200px;
   height: auto;
 }
 
-/* Make the existing profile image style more specific */
-main img {
-  width: 150px;
-  height: auto;
-}
-
-/* Remove padding from paragraph elements */
+/* CSS for paragraphs */
 p {
   padding: 0;
 }
 
-/* Style for the footer element */
+/* CSS for the footer */
 footer {
   margin-top: 15px;
   border-top: 1px solid #000;
   text-align: center;
+  padding: 1rem;
 }
+
 
 
 
