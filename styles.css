@@ -1,12 +1,13 @@
-/* Limit width for the main element */
+/* Limit the width of the main element */
 main {
   max-width: 840px;
+  margin: auto; /* Center the main content */
 }
 
 /* Style for the aside element */
 aside {
   width: 20rem;
-  margin: 1rem;
+  margin: 1rem auto; /* Center the aside element */
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 1rem;
   background-color: #eee;
@@ -18,12 +19,16 @@ aside {
 aside img {
   width: 200px;
   height: auto;
+  display: block;
+  margin: auto;
 }
 
-/* Make the existing profile image style more specific */
+/* Style for the profile image in the main element */
 main img {
   width: 150px;
   height: auto;
+  display: block;
+  margin: auto;
 }
 
 /* Remove padding from paragraph elements */
@@ -36,6 +41,7 @@ footer {
   margin-top: 15px;
   border-top: 1px solid #000;
   text-align: center;
+  padding: 1rem 0;
 }
 
 
