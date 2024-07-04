@@ -44,6 +44,27 @@ footer {
   padding: 1rem 0;
 }
 
+/* Style for the nav element */
+nav {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Style for the anchor tags inside the nav element */
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #007bff;
+}
+
+/* Style for the h1 element */
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
 
 
 
