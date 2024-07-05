@@ -1,58 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-
-:root {
-  --primary-color: #396e94;
-  --secondary-color: #e7c24f;
-  --accent1-color: #a43312;
-  --accent2-color: #381d2a;
-
-  --heading-font: 'Open Sans', sans-serif;
-  --paragraph-font: 'Open Sans', sans-serif;
-
-  --nav-background-color: #396e94;
-  --nav-link-color: #ffffff;
-  --nav-hover-link-color: #e7c24f;
-  --nav-hover-background-color: #a43312;
-}
-
+/* Reset and basic styling */
 body {
-  font-family: var(--paragraph-font);
-  max-width: 960px;
-  padding: 20px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--heading-font);
-  color: var(--primary-color);
+    font-family: 'Arial', sans-serif; /* Replace with your chosen font family */
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 header {
-  padding: 20px;
-  background-color: var(--accent1-color);
+    background-color: #396e94; /* Adjust as per your color palette */
+    color: #fff;
+    padding: 10px;
 }
 
-p {
-  padding: 25px;
+h1 {
+    font-size: 2em;
 }
 
 nav {
-  background-color: var(--nav-background-color);
-  font-size: 1.2rem;
-  display: flex;
+    background-color: #396e94; /* Adjust as per your color palette */
+    padding: 10px;
 }
 
 nav a {
-  display: block;
-  color: var(--nav-link-color);
-  text-decoration: none;
-  padding: 1rem;
-}
-
-nav a:link, nav a:visited {
-  color: var(--nav-link-color);
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
 }
 
 nav a:hover {
-  color: var(--nav-hover-link-color);
-  background-color: var(--nav-hover-background-color);
+    text-decoration: underline;
 }
+
+
