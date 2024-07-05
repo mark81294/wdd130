@@ -1,59 +1,95 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* CSS Variables */
+:root {
+    --primary-color: #396e94;
+    --secondary-color: #e7c24f;
+    --accent1-color: #a43312;
+    --accent2-color: #381d2a;
+    --heading-font: 'Roboto', sans-serif;
+    --paragraph-font: 'Arial', sans-serif;
+    --nav-background-color: #396e94;
+    --nav-link-color: #fff;
+    --nav-hover-link-color: #396e94;
+    --nav-hover-background-color: #e7c24f;
+}
+
 /* Reset and basic styling */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: var(--paragraph-font);
     max-width: 960px;
     margin: 0 auto;
     padding: 20px;
-    line-height: 1.6; /* Improved readability with increased line-height */
+    line-height: 1.6;
 }
 
 header {
-    background-color: #396e94;
+    background-color: var(--primary-color);
     color: #fff;
     padding: 10px;
     text-align: center;
-    margin-bottom: 20px; /* Add margin at the bottom of the header */
+    margin-bottom: 20px;
 }
 
 h1 {
-    font-size: 2.5em; /* Slightly increased font size for main heading */
-    margin-bottom: 10px; /* Separate main heading from subsequent content */
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-family: var(--heading-font);
+}
+
+/* Grouping headings */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    font-family: var(--heading-font);
 }
 
 nav {
-    background-color: #396e94;
+    background-color: var(--nav-background-color);
     padding: 10px;
     text-align: center;
-    margin-bottom: 20px; /* Add margin at the bottom of the navigation */
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 nav a {
-    color: #fff;
+    color: var(--nav-link-color);
     text-decoration: none;
-    margin: 0 10px; /* Equal margin on both sides of navigation links */
-    padding: 8px 16px; /* Increased padding for better clickability */
-    border-radius: 4px; /* Rounded corners for navigation links */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+    margin: 0 10px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:link,
+nav a:visited {
+    color: var(--nav-link-color);
 }
 
 nav a:hover {
-    background-color: #e7c24f;
-    color: #396e94;
+    background-color: var(--nav-hover-background-color);
+    color: var(--nav-hover-link-color);
+}
+
+/* Additional styles */
+p {
+    margin-bottom: 1em;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     body {
-        padding: 10px; /* Decrease padding for smaller screens */
+        padding: 10px;
     }
     header, nav {
-        padding: 8px; /* Adjust padding for header and navigation */
+        padding: 8px;
     }
     h1 {
-        font-size: 2em; /* Decrease font size for smaller screens */
+        font-size: 2em;
     }
     nav a {
-        margin: 0 5px; /* Decrease margin for navigation links */
-        padding: 6px 12px; /* Decrease padding for navigation links */
+        margin: 0 5px;
+        padding: 6px 12px;
     }
 }
