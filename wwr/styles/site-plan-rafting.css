@@ -1,34 +1,59 @@
 /* Reset and basic styling */
 body {
-    font-family: 'Arial', sans-serif; /* Replace with your chosen font family */
+    font-family: 'Arial', sans-serif;
     max-width: 960px;
     margin: 0 auto;
     padding: 20px;
+    line-height: 1.6; /* Improved readability with increased line-height */
 }
 
 header {
-    background-color: #396e94; /* Adjust as per your color palette */
+    background-color: #396e94;
     color: #fff;
     padding: 10px;
+    text-align: center;
+    margin-bottom: 20px; /* Add margin at the bottom of the header */
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 2.5em; /* Slightly increased font size for main heading */
+    margin-bottom: 10px; /* Separate main heading from subsequent content */
 }
 
 nav {
-    background-color: #396e94; /* Adjust as per your color palette */
+    background-color: #396e94;
     padding: 10px;
+    text-align: center;
+    margin-bottom: 20px; /* Add margin at the bottom of the navigation */
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    margin-right: 10px;
+    margin: 0 10px; /* Equal margin on both sides of navigation links */
+    padding: 8px 16px; /* Increased padding for better clickability */
+    border-radius: 4px; /* Rounded corners for navigation links */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 nav a:hover {
-    text-decoration: underline;
+    background-color: #e7c24f;
+    color: #396e94;
 }
 
-
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Decrease padding for smaller screens */
+    }
+    header, nav {
+        padding: 8px; /* Adjust padding for header and navigation */
+    }
+    h1 {
+        font-size: 2em; /* Decrease font size for smaller screens */
+    }
+    nav a {
+        margin: 0 5px; /* Decrease margin for navigation links */
+        padding: 6px 12px; /* Decrease padding for navigation links */
+    }
+}
