@@ -1,3 +1,10 @@
+:root {
+  --main-bg-color: #eee;
+  --text-color: #333;
+  --link-color: #007bff;
+  --border-color: rgba(0, 0, 0, 0.1);
+}
+
 /* Universal selector to reset margin, padding, and set box-sizing */
 * {
   margin: 0;
@@ -5,26 +12,40 @@
   box-sizing: border-box;
 }
 
+/* Flexbox layout for the body to handle aside and main */
+body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+  background-color: #f9f9f9;
+}
+
 /* Limit the width of the main element */
 main {
   max-width: 840px;
-  margin: auto; /* Center the main content */
+  flex: 1 1 60%;
+  margin: 1rem;
 }
 
 /* Style for the aside element */
 aside {
-  width: 20rem;
-  margin: 1rem auto; /* Center the aside element */
+  width: 100%;
+  max-width: 300px;
+  margin: 1rem;
   padding: 1rem;
-  background-color: #eee;
-  color: #333;
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
   text-align: center;
   position: relative; /* For positioning h2 */
+  flex: 1 1 30%;
 }
 
 /* Style for the image inside the aside element */
 aside img {
-  width: 200px;
+  width: 100%;
+  max-width: 200px;
   height: auto;
   display: block;
   margin: auto;
@@ -32,11 +53,13 @@ aside img {
 
 /* Style for the profile image in the main element */
 main img {
-  width: 200px;
+  width: 100%;
+  max-width: 200px;
   height: auto;
   display: block;
   margin: auto;
   float: right; /* Float the profile image to the right */
+  margin-left: 1rem;
 }
 
 /* Remove padding from paragraph elements */
@@ -50,6 +73,7 @@ footer {
   border-top: 1px solid #000;
   text-align: center;
   padding: 1rem 0;
+  width: 100%;
 }
 
 /* Style for the nav element */
@@ -57,13 +81,14 @@ nav {
   background-color: #f8f9fa;
   padding: 1rem;
   text-align: center;
+  width: 100%;
 }
 
 /* Style for the anchor tags inside the nav element */
 nav a {
   margin: 0 1rem;
   text-decoration: none;
-  color: #007bff;
+  color: var(--link-color);
 }
 
 /* Style for the h1 element */
@@ -77,7 +102,7 @@ h1 {
 /* Style for the .box class */
 .box {
   margin: 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
   padding: 1rem;
   background-color: #ddd;
   color: #000;
@@ -87,8 +112,10 @@ h1 {
 aside h2 {
   position: absolute;
   top: 47px;
-  left: 150px;
+  left: 50%;
+  transform: translateX(-50%);
 }
+
 
 
 
