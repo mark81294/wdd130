@@ -1,3 +1,10 @@
+/* Universal selector to reset margin, padding, and set box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Limit the width of the main element */
 main {
   max-width: 840px;
@@ -8,11 +15,11 @@ main {
 aside {
   width: 20rem;
   margin: 1rem auto; /* Center the aside element */
-  border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 1rem;
   background-color: #eee;
   color: #333;
   text-align: center;
+  position: relative; /* For positioning h2 */
 }
 
 /* Style for the image inside the aside element */
@@ -29,6 +36,7 @@ main img {
   height: auto;
   display: block;
   margin: auto;
+  float: right; /* Float the profile image to the right */
 }
 
 /* Remove padding from paragraph elements */
@@ -64,6 +72,24 @@ h1 {
   font-size: 2rem;
   margin-top: 1rem;
 }
+
+/* Class Selectors */
+/* Style for the .box class */
+.box {
+  margin: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  background-color: #ddd;
+  color: #000;
+}
+
+/* Absolute positioning for h2 inside aside */
+aside h2 {
+  position: absolute;
+  top: 47px;
+  left: 150px;
+}
+
 
 
 
