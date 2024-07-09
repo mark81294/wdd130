@@ -32,7 +32,7 @@ aside img {
 }
 
 /* Style for the profile image in the main element */
-main img.profile {
+main img.profile { /* Added .profile class for specificity */
   width: 200px;
   height: auto;
   display: block;
@@ -100,8 +100,5 @@ aside h2 {
   background: #eee; /* Match the background of the aside */
   padding: 0.5rem; /* Added padding for better spacing */
 }
-
-/* CSS Comment */
-/* Class Selectors */
 
 
