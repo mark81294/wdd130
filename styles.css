@@ -38,12 +38,11 @@ main img.profile { /* Added .profile class for specificity */
   display: block;
   margin: 0 auto 1rem; /* Adjusted margin for better spacing */
   float: right; /* Float the profile image to the right */
-  clear: both; /* Ensure it doesn't overlap with other floated elements */
+  clear: right; /* Ensure it doesn't overlap with other floated elements */
 }
 
 /* General paragraph style */
 p {
-  padding: 0;
   margin-bottom: 1rem; /* Added bottom margin for better readability */
 }
 
@@ -100,5 +99,4 @@ aside h2 {
   background: #eee; /* Match the background of the aside */
   padding: 0.5rem; /* Added padding for better spacing */
 }
-
 
