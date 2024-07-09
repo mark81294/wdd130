@@ -65,20 +65,14 @@ nav a:hover {
 
 .hero article {
     position: absolute;
-    top: 50%;
+    bottom: 10%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 5em;
-    max-width: 500px;
-    text-align: center;
-    color: rgb(255, 255, 255);
-}
-
-.hero article img {
-    float: right;
-    margin-left: 1em;
-    max-width: 100%;
+    padding: 1em;
+    max-width: 400px;
+    text-align: left;
+    color: white;
 }
 
 /* Article Section Styles */
@@ -96,6 +90,27 @@ article img {
     max-width: 100%;
 }
 
+/* Two Columns Article Styles */
+article.two-columns {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1em;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    gap: 1em; /* Space between image and text */
+}
+
+article.two-columns img {
+    max-width: 50%; /* Adjust width as needed */
+    height: auto;
+}
+
+article.two-columns p {
+    flex: 1;
+}
+
 /* Sections Styles */
 section {
     padding: 2em 1em;
@@ -106,22 +121,14 @@ section h2 {
 }
 
 /* Adventure Awaits You! Section Styles */
-section {
-    padding: 2em 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items horizontally */
-}
-
 .adventure-images {
     display: grid;
-    grid-template-columns: 1fr; /* Display images in a single column */
+    grid-template-columns: repeat(5, 1fr); /* Display images in a grid with 5 columns */
     gap: 10px; /* Adjusted gap between images */
-    align-self: center; /* Center the grid vertically */
 }
 
 .adventure-images img {
-    width: 100%; /* Ensure images take up full width of their container */
+    max-width: 100%; /* Ensure images don't exceed their container */
     height: auto; /* Maintain aspect ratio */
 }
 
