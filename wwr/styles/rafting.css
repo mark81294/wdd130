@@ -22,7 +22,7 @@ body {
     background-color: var(--background-color);
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px; /* Added padding to body */
+    padding: 0 20px;
 }
 
 /* Header Styles */
@@ -32,30 +32,30 @@ header {
     align-items: center;
     padding: 1em;
     background-color: var(--primary-color);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header img {
-    height: auto; /* Allow logo to scale */
-    max-height: 50px; /* Limit maximum height */
+    height: auto;
+    max-height: 50px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     margin: 0 1em;
-    transition: color 0.3s; /* Smooth transition */
+    transition: color 0.3s;
 }
 
 nav a:hover {
-    color: lightgray; /* Hover color */
+    color: lightgray;
 }
 
 /* Hero Section Styles */
 .hero {
     position: relative;
     text-align: center;
-    margin-bottom: 2em; /* Added spacing */
+    margin-bottom: 2em;
 }
 
 .hero img {
@@ -63,42 +63,37 @@ nav a:hover {
     height: auto;
 }
 
-.hero-article {
+.hero article {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.5);
     padding: 1em;
-    max-width: 400px; /* Adjusted maximum width */
-    text-align: left; /* Adjusted alignment */
+    max-width: 400px;
+    text-align: left;
     color: white;
 }
 
-.hero-article img {
+.hero article img {
     float: right;
     margin-left: 1em;
-    max-width: 100%; /* Ensure image stays within container */
-}
-
-.hero-article p {
-    margin-top: 1em; /* Added space between image and text */
+    max-width: 100%;
 }
 
 /* Article Section Styles */
 article {
-    position: relative; /* Changed to relative for better flow */
     background-color: rgba(255, 255, 255, 0.8);
     padding: 1em;
-    max-width: 600px; /* Increased maximum width */
-    margin: 0 auto; /* Centered horizontally */
-    text-align: left; /* Adjusted alignment */
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
 }
 
 article img {
     float: right;
-    margin: 0 0 1em 1em; /* Adjusted margins */
-    max-width: 100%; /* Ensure image stays within container */
+    margin: 0 0 1em 1em;
+    max-width: 100%;
 }
 
 /* Sections Styles */
@@ -118,7 +113,7 @@ footer {
     padding: 1em;
     background-color: var(--secondary-color);
     color: white;
-    margin-top: 2em; /* Added space at the top */
+    margin-top: 2em;
 }
 
 footer p {
@@ -136,17 +131,4 @@ footer p {
 
 .sociallinks img {
     height: 30px;
-}
-
-/* Adventure Awaits You! Section Styles */
-.adventure-images {
-    display: grid;
-    grid-template-columns: 1fr; /* Display images in a single column */
-    gap: 10px; /* Adjusted gap between images */
-}
-
-.adventure-images img {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Maintain aspect ratio */
 }
