@@ -32,7 +32,7 @@ aside img {
 }
 
 /* Style for the profile image in the main element */
-main img.profile { /* Added .profile class for specificity */
+main img.profile {
   width: 200px;
   height: auto;
   display: block;
@@ -103,3 +103,4 @@ aside h2 {
 
 /* CSS Comment */
 /* Class Selectors */
+
