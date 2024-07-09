@@ -6,21 +6,21 @@
 }
 
 /* Limit the width of the main element and center it */
-main {
+header, .grid, footer {
   max-width: 840px;
-  margin: auto; /* Center the main content */
-  padding: 1rem; /* Added padding for better spacing */
+  margin: 0 auto;
 }
 
 /* Style for the aside element */
 aside {
   width: 20rem;
-  margin: 1rem auto; /* Center the aside element */
   padding: 1rem;
   background-color: #eee;
   color: #333;
   text-align: center;
   position: relative; /* For positioning h2 */
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
 
 /* Style for the image inside the aside element */
@@ -56,21 +56,21 @@ footer {
 
 /* Style for the nav element */
 nav {
-  background-color: #f8f9fa;
+  background-color: steelblue;
   padding: 1rem;
-  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 /* Style for the anchor tags inside the nav element */
 nav a {
-  margin: 0 1rem;
+  display: block;
+  padding: 0.5rem;
   text-decoration: none;
-  color: #007bff;
-  transition: color 0.3s; /* Smooth transition for hover effect */
-}
-
-nav a:hover {
-  color: #0056b3; /* Darker blue for hover effect */
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff; /* shorthand for white */
 }
 
 /* Style for the h1 element */
@@ -78,6 +78,7 @@ h1 {
   text-align: center;
   font-size: 2rem;
   margin-top: 1rem;
+  border-bottom: 2px solid #000; /* Bottom border for h1 */
 }
 
 /* Class Selectors */
@@ -98,6 +99,18 @@ aside h2 {
   transform: translateX(-50%); /* Center h2 horizontally */
   background: #eee; /* Match the background of the aside */
   padding: 0.5rem; /* Added padding for better spacing */
+}
+
+/* Grid layout for the main and aside elements */
+.grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr;
+}
+
+main {
+  grid-column: 2 / 3;
+  margin: 1rem;
 }
 
 
