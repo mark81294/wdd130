@@ -5,10 +5,11 @@
   box-sizing: border-box;
 }
 
-/* Limit the width of the main element */
+/* Limit the width of the main element and center it */
 main {
   max-width: 840px;
   margin: auto; /* Center the main content */
+  padding: 1rem; /* Added padding for better spacing */
 }
 
 /* Style for the aside element */
@@ -31,17 +32,19 @@ aside img {
 }
 
 /* Style for the profile image in the main element */
-main img {
+main img.profile { /* Added .profile class for specificity */
   width: 200px;
   height: auto;
   display: block;
-  margin: auto;
+  margin: 0 auto 1rem; /* Adjusted margin for better spacing */
   float: right; /* Float the profile image to the right */
+  clear: both; /* Ensure it doesn't overlap with other floated elements */
 }
 
-/* Remove padding from paragraph elements */
+/* General paragraph style */
 p {
   padding: 0;
+  margin-bottom: 1rem; /* Added bottom margin for better readability */
 }
 
 /* Style for the footer element */
@@ -64,6 +67,11 @@ nav a {
   margin: 0 1rem;
   text-decoration: none;
   color: #007bff;
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+  color: #0056b3; /* Darker blue for hover effect */
 }
 
 /* Style for the h1 element */
@@ -86,9 +94,13 @@ h1 {
 /* Absolute positioning for h2 inside aside */
 aside h2 {
   position: absolute;
-  top: 47px;
-  left: 150px;
+  top: 10px; /* Adjusted positioning */
+  left: 50%;
+  transform: translateX(-50%); /* Center h2 horizontally */
+  background: #eee; /* Match the background of the aside */
+  padding: 0.5rem; /* Added padding for better spacing */
 }
+
 
 
 
