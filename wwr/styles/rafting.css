@@ -41,14 +41,14 @@ header img {
 }
 
 nav a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     margin: 0 1em;
     transition: color 0.3s;
 }
 
 nav a:hover {
-    color: lightgray;
+    color: rgb(226, 223, 223);
 }
 
 /* Hero Section Styles */
@@ -69,10 +69,10 @@ nav a:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 1em;
-    max-width: 400px;
-    text-align: left;
-    color: white;
+    padding: 5em;
+    max-width: 500px;
+    text-align: center;
+    color: rgb(255, 255, 255);
 }
 
 .hero article img {
@@ -105,6 +105,27 @@ section h2 {
     margin-bottom: 1em;
 }
 
+/* Adventure Awaits You! Section Styles */
+section {
+    padding: 2em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+}
+
+.adventure-images {
+    display: grid;
+    grid-template-columns: 1fr; /* Display images in a single column */
+    gap: 10px; /* Adjusted gap between images */
+    align-self: center; /* Center the grid vertically */
+}
+
+.adventure-images img {
+    width: 100%; /* Ensure images take up full width of their container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
 /* Footer Styles */
 footer {
     display: flex;
@@ -132,3 +153,4 @@ footer p {
 .sociallinks img {
     height: 30px;
 }
+
