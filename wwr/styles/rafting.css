@@ -27,8 +27,8 @@ body {
 
 /* Header Styles */
 header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
     padding: 1em;
     background-color: var(--primary-color);
@@ -36,20 +36,25 @@ header {
 }
 
 header img {
-    height: auto;
     max-height: 50px;
 }
 
+header nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
 nav a {
-    color: rgb(0, 0, 0);
+    color: var(--text-color);
     text-decoration: none;
     margin: 0 1em;
     transition: color 0.3s;
 }
 
 nav a:hover {
-    color: rgb(226, 223, 223);
+    color: #000;
 }
+
 
 /* Hero Section Styles */
 .hero {
@@ -63,20 +68,23 @@ nav a:hover {
     height: auto;
 }
 
-.hero article {
+.hero-content {
     position: absolute;
-    bottom: 10%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, 0%);
+    transform: translate(-50%, -50%);
+    max-width: 80%; /* Adjust as needed */
     background-color: rgba(0, 0, 0, 0.5);
     padding: 1em;
-    max-width: 400px;
-    text-align: left;
+    text-align: center;
     color: white;
 }
 
-/* Article Section Styles */
-article {
+.hero-content h1 {
+    margin: 0;
+}
+
+.hero-content article {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 1em;
     max-width: 600px;
@@ -84,54 +92,71 @@ article {
     text-align: left;
 }
 
-article img {
+.hero-content article p {
+    margin-bottom: 1em;
+}
+
+.hero-content article img {
     float: right;
     margin: 0 0 1em 1em;
     max-width: 100%;
 }
 
-/* Two Columns Article Styles */
-article.two-columns {
+/* Adjusted to Horizontal Layout */
+.hero article {
     display: flex;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: var(--primary-color);
     padding: 1em;
-    max-width: 600px;
-    margin: 0 auto;
     text-align: left;
-    gap: 1em; /* Space between image and text */
+    margin: 0 auto;
+    max-width: 1000px;
 }
 
-article.two-columns img {
-    max-width: 50%; /* Adjust width as needed */
-    height: auto;
-}
-
-article.two-columns p {
+.hero article p {
     flex: 1;
 }
 
-/* Sections Styles */
-section {
-    padding: 2em 1em;
+.hero article img {
+    margin-left: 1em;
+    max-width: 150px;
 }
 
-section h2 {
+
+/* History Section Styles */
+.history {
+    padding: 2em 1em;
+    background-color: var(--background-color);
+}
+
+.history h2 {
     margin-bottom: 1em;
 }
 
-/* Adventure Awaits You! Section Styles */
+/* Adventure Section Styles */
+.adventure {
+    padding: 2em 1em;
+    background-color: var(--primary-color);
+}
+
+.adventure h2 {
+    margin-bottom: 1em;
+}
+
 .adventure-images {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Display images in a grid with 5 columns */
-    gap: 10px; /* Adjusted gap between images */
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.adventure-images figure {
+    text-align: center;
 }
 
 .adventure-images img {
-    max-width: 100%; /* Ensure images don't exceed their container */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%;
+    height: auto;
 }
-
 
 /* Footer Styles */
 footer {
