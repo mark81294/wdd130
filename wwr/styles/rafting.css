@@ -25,6 +25,11 @@ body {
     padding: 0 20px;
 }
 
+/* Specific Styles for Contact Page */
+.contact-page {
+    color: black;
+}
+
 /* Header Styles */
 header {
     display: grid;
@@ -124,64 +129,217 @@ nav a:hover {
 /* History Section Styles */
 .history {
     padding: 2em 1em;
-    background-color: var(--background-color);
-    color: rgb(0, 0, 0);
+    background-color: var(--secondary-color);
+    margin-bottom: 2em;
 }
 
 .history h2 {
+    text-align: center;
     margin-bottom: 1em;
 }
 
-/* Adventure Section Styles */
-.adventure {
-    padding: 2em 1em;
-    background-color: var(--primary-color);
-}
-
-.adventure h2 {
-    margin-bottom: 1em;
-}
-
-.adventure-images {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
-}
-
-.adventure-images figure {
+.history article {
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
 }
 
-.adventure-images img {
-    max-width: 100%;
+.history p {
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+/* Image Carousel Styles */
+.image-carousel {
+    padding: 2em 1em;
+    background-color: var(--background-color);
+}
+
+.image-carousel h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.image-carousel img {
+    width: 100%;
     height: auto;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(247, 244, 244, 0.1);
+}
+
+/* Testimonial Section Styles */
+.testimonials {
+    padding: 2em 1em;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+}
+
+.testimonials h2 {
+    margin-bottom: 1em;
+}
+
+.testimonials .testimonial {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--secondary-color);
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(247, 244, 244, 0.1);
+}
+
+.testimonials .testimonial p {
+    line-height: 1.6;
+}
+
+.testimonials .testimonial cite {
+    display: block;
+    margin-top: 1em;
+    font-style: normal;
+    color: var(--text-color);
+}
+
+/* Contact Info Section Styles */
+.contact-info {
+    padding: 2em 1em;
+    background-color: var(--secondary-color);
+}
+
+.contact-info h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.contact-info address {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-style: normal;
+    line-height: 1.6;
+}
+
+.contact-info .map {
+    margin-top: 2em;
+}
+
+/* Employee Profiles Section Styles */
+.employees {
+    padding: 2em 1em;
+    background-color: var(--background-color);
+}
+
+.employees h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.employee-profiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.employee-profiles figure {
+    text-align: center;
+    margin-bottom: 2em;
+    width: 150px;
+}
+
+.employee-profiles img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.employee-profiles figcaption {
+    margin-top: 0.5em;
+}
+
+/* Contact Form Section Styles */
+.contact-form {
+    padding: 2em 1em;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.contact-form form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--secondary-color);
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(247, 244, 244, 0.1);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-form input[type="checkbox"],
+.contact-form input[type="radio"] {
+    width: auto;
+    margin-right: 0.5em;
+}
+
+.contact-form button {
+    display: block;
+    width: 100%;
+    padding: 0.75em;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #ffffff;
+    color: var(--primary-color);
 }
 
 /* Footer Styles */
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 1em;
     background-color: var(--primary-color);
-    color: white;
-    margin-top: 2em;
+    color: var(--text-color);
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(247, 244, 244, 0.1);
 }
 
 footer p {
-    margin: 0;
+    margin-bottom: 0.5em;
 }
 
-.sociallinks {
-    display: flex;
-}
-
-.sociallinks a {
+footer .sociallinks img {
+    width: 30px;
     margin: 0 0.5em;
-    text-decoration: none;
 }
 
-.sociallinks img {
-    height: 30px;
+/* Contact Wireframe Link */
+footer p a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer p a:hover {
+    color: #ffffff;
 }
 
