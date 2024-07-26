@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about our rafting company and adventures.">
+    <meta name="author" content="Mark Jay Mamuad">
+    <title>Trips - Schedule a Trip</title>
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Rafting Company Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="schedule-trip">
+            <h1>Schedule a Trip</h1>
+            <div class="container">
+                <form id="schedule-trip-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="trip-date">Trip Date:</label>
+                        <input type="date" id="trip-date" name="trip_date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="trip-time">Trip Time:</label>
+                        <input type="time" id="trip-time" name="trip_time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="trip-type">Trip Type:</label>
+                        <select id="trip-type" name="trip_type" required>
+                            <option value="rafting">Rafting</option>
+                            <option value="kayaking">Kayaking</option>
+                            <option value="canoeing">Canoeing</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="comments">Additional Comments:</label>
+                        <textarea id="comments" name="comments" rows="4"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Schedule Trip</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="scheduled-trips">
+            <h2>Scheduled Trips</h2>
+            <div id="scheduled-trips-container">
+                <!-- Scheduled trips will be displayed here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Whitewater Rafting. Designed by Mark Jay Mamuad</p>
+        <div class="sociallinks">
+            <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="https://twitter.com"><img src="images/twitter.png" alt="Twitter"></a>
+            <a href="https://instagram.com"><img src="images/instagram.png" alt="Instagram"></a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('schedule-trip-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const tripDate = document.getElementById('trip-date').value;
+            const tripTime = document.getElementById('trip-time').value;
+            const tripType = document.getElementById('trip-type').value;
+            const comments = document.getElementById('comments').value;
+
+            // Create a new trip entry
+            const tripEntry = document.createElement('div');
+            tripEntry.classList.add('trip-entry');
+            tripEntry.innerHTML = `
+                <h3>${tripType}</h3>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Date:</strong> ${tripDate}</p>
+                <p><strong>Time:</strong> ${tripTime}</p>
+                <p><strong>Comments:</strong> ${comments}</p>
+            `;
+
+            // Add the new trip to the scheduled trips container
+            document.getElementById('scheduled-trips-container').appendChild(tripEntry);
+
+            // Clear the form
+            document.getElementById('schedule-trip-form').reset();
+        });
+    </script>
+</body>
+</html>

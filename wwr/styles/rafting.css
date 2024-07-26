@@ -2,10 +2,11 @@
 
 /* Root Variables */
 :root {
-    --primary-color: #2f5d8b;
-    --secondary-color: #8c959c;
-    --background-color: #e9edf0;
-    --text-color: #ffffff;
+    --primary-color: #2f5d8b; /* Dark Blue */
+    --secondary-color: #8c959c; /* Gray Blue */
+    --background-color: #e9edf0; /* Light Gray Blue */
+    --text-color: #000000; /* Black */
+    --button-hover-color: #555555; /* Dark Gray */
 }
 
 /* General Reset */
@@ -25,11 +26,6 @@ body {
     padding: 0 20px;
 }
 
-/* Specific Styles for Contact Page */
-.contact-page {
-    color: black;
-}
-
 /* Header Styles */
 header {
     display: grid;
@@ -37,7 +33,7 @@ header {
     align-items: center;
     padding: 1em;
     background-color: var(--primary-color);
-    box-shadow: 0 2px 5px rgba(247, 244, 244, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header img {
@@ -56,8 +52,130 @@ nav a {
     transition: color 0.3s;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
     color: #ffffff;
+    outline: 2px solid #ffffff; /* Visible focus outline */
+}
+
+/* Schedule Trip Section Styles */
+.schedule-trip {
+    padding: 2em 0;
+    background-color: #ffffff;
+    color: #000000;
+    margin-bottom: 2em;
+}
+
+.schedule-trip h1 {
+    text-align: center;
+    margin-bottom: 1em;
+    color: var(--primary-color);
+}
+
+.schedule-trip .container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    background-color: var(--background-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.schedule-trip .form-group {
+    margin-bottom: 20px;
+}
+
+.schedule-trip label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.schedule-trip input[type="text"],
+.schedule-trip input[type="email"],
+.schedule-trip input[type="date"],
+.schedule-trip input[type="time"],
+.schedule-trip select,
+.schedule-trip textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.schedule-trip button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.schedule-trip button:hover,
+.schedule-trip button:focus {
+    background-color: var(--button-hover-color);
+}
+
+/* Scheduled Trips Section Styles */
+.scheduled-trips {
+    padding: 2em 0;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.scheduled-trips h2 {
+    text-align: center;
+    margin-bottom: 1em;
+    color: var(--primary-color);
+}
+
+#scheduled-trips-container {
+    width: 80%;
+    margin: auto;
+}
+
+.trip-entry {
+    background-color: var(--background-color);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.trip-entry h3 {
+    margin-top: 0;
+}
+
+/* Footer Styles */
+footer {
+    padding: 1em;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin-bottom: 0.5em;
+}
+
+footer .sociallinks img {
+    width: 30px;
+    margin: 0 0.5em;
+}
+
+footer p a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer p a:hover,
+footer p a:focus {
+    color: #ffffff;
+    outline: 2px solid #ffffff; /* Visible focus outline */
 }
 
 /* Hero Section Styles */
@@ -136,6 +254,7 @@ nav a:hover {
 .history h2 {
     text-align: center;
     margin-bottom: 1em;
+    color: var(--primary-color);
 }
 
 .history article {
@@ -158,6 +277,7 @@ nav a:hover {
 .image-carousel h2 {
     text-align: center;
     margin-bottom: 1em;
+    color: var(--primary-color);
 }
 
 .image-carousel img {
@@ -165,7 +285,7 @@ nav a:hover {
     height: auto;
     margin-bottom: 1em;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(247, 244, 244, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Testimonial Section Styles */
@@ -186,7 +306,7 @@ nav a:hover {
     background-color: var(--secondary-color);
     padding: 1em;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(247, 244, 244, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .testimonials .testimonial p {
@@ -209,6 +329,7 @@ nav a:hover {
 .contact-info h2 {
     text-align: center;
     margin-bottom: 1em;
+    color: var(--primary-color);
 }
 
 .contact-info address {
@@ -234,6 +355,7 @@ nav a:hover {
 .employees h2 {
     text-align: center;
     margin-bottom: 1em;
+    color: var(--primary-color);
 }
 
 .employee-profiles {
@@ -267,6 +389,7 @@ nav a:hover {
 .contact-form h2 {
     text-align: center;
     margin-bottom: 1em;
+    color: #ffffff;
 }
 
 .contact-form form {
@@ -275,7 +398,7 @@ nav a:hover {
     background-color: var(--secondary-color);
     padding: 1em;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(247, 244, 244, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form label {
@@ -311,37 +434,14 @@ nav a:hover {
     transition: background-color 0.3s;
 }
 
-.contact-form button:hover {
-    background-color: #ffffff;
-    color: var(--primary-color);
-}
-
-/* Footer Styles */
-footer {
-    padding: 1em;
-    background-color: var(--primary-color);
+.contact-form button:hover,
+.contact-form button:focus {
+    background-color: var(--button-hover-color);
     color: var(--text-color);
-    text-align: center;
-    box-shadow: 0 -2px 5px rgba(247, 244, 244, 0.1);
 }
 
-footer p {
-    margin-bottom: 0.5em;
+/* Ensure focus visibility */
+a:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
 }
-
-footer .sociallinks img {
-    width: 30px;
-    margin: 0 0.5em;
-}
-
-/* Contact Wireframe Link */
-footer p a {
-    color: var(--text-color);
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-footer p a:hover {
-    color: #ffffff;
-}
-
