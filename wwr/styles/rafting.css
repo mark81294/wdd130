@@ -483,3 +483,185 @@ a:focus {
     text-align: center;
     margin-top: 0.5em;
 }
+
+
+
+.why-choose-us {
+    padding: 20px;
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    margin-bottom: 20px;
+}
+
+.reasons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    gap: 20px; /* Space between items */
+}
+
+.reason {
+    flex: 1;
+    max-width: 300px; /* Ensures boxes don't grow too large */
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.reason img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.reason h3 {
+    margin: 10px 0;
+}
+
+.reason p {
+    margin: 0;
+}
+
+
+
+
+
+.testimonials {
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-cards {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping if there is not enough space */
+    justify-content: center; /* Centers items horizontally */
+    gap: 1.5rem; /* Space between cards */
+}
+
+.testimonial-card {
+    flex: 1 1 calc(33.333% - 1.5rem); /* Adjusts the width of each card */
+    box-sizing: border-box; /* Ensures padding and borders do not affect width */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    max-width: 300px; /* Optional: sets a maximum width for the cards */
+}
+
+.testimonial-card img {
+    width: 80px; /* Adjust width as needed */
+    height: 80px;
+    border-radius: 50%; /* Circular images */
+    margin-bottom: 1rem;
+}
+
+.testimonial-card blockquote {
+    font-style: italic;
+    margin: 1rem 0;
+    color: #333;
+}
+
+.testimonial-card p {
+    font-weight: bold;
+    color: #555;
+}
+
+
+
+.contact-us {
+    background-color: #E0F7FA; /* Light blue background */
+    padding: 50px 20px; /* Padding around the section */
+    text-align: center; /* Center-align the text */
+    border: 1px solid #B2EBF2; /* Light blue border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    margin: 20px auto; /* Center the section horizontally */
+    max-width: 800px; /* Limit the max width of the section */
+}
+
+.contact-us h2 {
+    font-size: 2em; /* Increase the font size */
+    color: #2f5d8b; /* Darker blue-green color */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.contact-us p {
+    font-size: 1.2em; /* Increase the font size */
+    color: #2f5d8b; /* Darker text color */
+    margin-bottom: 30px; /* Space below the paragraph */
+}
+
+.contact-us .cta-button {
+    display: inline-block; /* Inline block for button styling */
+    padding: 15px 30px; /* Padding for the button */
+    background-color: #2f5d8b; /* Button background color */
+    color: #FFFFFF; /* Button text color */
+    text-decoration: none; /* Remove underline from link */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.contact-us .cta-button:hover {
+    background-color: #2f5d8b; /* Darker background on hover */
+}
+
+
+
+.front {
+    position: relative;
+    text-align: center;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.front-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.front-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.front-content p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.25rem;
+    color: white;
+    background-color: #2f5d8b;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #00264d;
+}
